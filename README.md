@@ -28,6 +28,15 @@
 - `/pixiv_novel <标签>` - 搜索小说
 - `/pixiv_novel download <小说ID>` - 下载小说为 pdf 文件并用文件md5值进行加密
 
+### 随机搜索功能
+- `/pixiv_random_add <标签>` - 添加随机搜索标签
+- `/pixiv_random_list` - 列出当前随机搜索标签
+- `/pixiv_random_del <序号>` - 删除指定序号的随机搜索标签
+- `/pixiv_random_suspend` - 暂停当前群聊的随机搜索
+- `/pixiv_random_resume` - 恢复当前群聊的随机搜索
+- `/pixiv_random_status` - 查看随机搜索队列状态
+- `/pixiv_random_force` - 强制执行当前群聊的随机搜索（调试用）
+
 ### 排除 tag
 - `-<tag>` - 排除包含 `<tag>` 的插画(仅在 /pixiv, /pixiv_novel, /pixiv_deepsearch, /pixiv_and 中有效)
 
@@ -133,6 +142,15 @@
 /pixiv_subscribe_add 123456
 /pixiv_subscribe_remove 123456
 /pixiv_subscribe_list
+
+# 随机搜索功能
+/pixiv_random_add 风景
+/pixiv_random_list
+/pixiv_random_del 1
+/pixiv_random_suspend
+/pixiv_random_resume
+/pixiv_random_status
+/pixiv_random_force
 ```
 
 ## ⚙️ 配置选项
