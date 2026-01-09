@@ -67,6 +67,17 @@ class RandomRankingConfig(BaseModel):
         primary_key = pw.CompositeKey("chat_id", "mode")
 
 
+class RandomRankingConfig(BaseModel):
+    """随机排行榜配置模型"""
+    chat_id = pw.CharField()  # 群号
+    session_id = pw.TextField()  # 用于发送消息
+    mode = pw.CharField()  # 排行榜模式
+    date = pw.CharField(null=True)  # 可选的日期参数
+    is_suspended = pw.BooleanField(default=False)  # 是否暂停
+    
+    class Meta:
+        primary_key = pw.CompositeKey('chat_id', 'mode')
+
 class RandomSearchSchedule(BaseModel):
     """随机搜索调度时间模型"""
 
